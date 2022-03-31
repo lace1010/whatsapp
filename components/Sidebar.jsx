@@ -72,7 +72,11 @@ const Sidebar = () => {
     <Container>
       <Header>
         <UserAvatar
-          onClick={() => signOut({ callbackUrl: "http://localhost:3000/" })}
+          onClick={() =>
+            signOut({
+              callbackUrl: "https://whatsapp-clone-delta-one.vercel.app/",
+            })
+          }
           src={session?.user?.image}
           alt="user"
         />

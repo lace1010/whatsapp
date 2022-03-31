@@ -74,12 +74,11 @@ const ChatScreen = ({ chat, messages }) => {
       ));
     }
     // This works and shows serverSideRendering. But messageSnapshot is always there so it never gets called...
-    // else {
-    //   console.log("Helloooooooo");
-    //   return JSON.parse(messages).map((message) => (
-    //     <Message key={message.id} user={message.user} message={message} />
-    //   ));
-    //}
+    else {
+      return JSON.parse(messages).map((message) => (
+        <Message key={message.id} user={message.user} message={message} />
+      ));
+    }
   };
 
   // Use this in invisble div to scroll to bottom of messages onLoad and when messageSnapshot updates
